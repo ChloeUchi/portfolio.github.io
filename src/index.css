@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'bullpen';
+  src: local('bullpen'), url('./assets/bullpen.otf') format('truetype');
+}
+@font-face {
+  font-family: 'kalam';
+  src: local('kalam'), url('./assets/Kalam-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'homemade';
+  src: local('homemade'), url('./assets/Homemade.ttf') format('truetype');
+}
+.about-container {
+  filter: url(#grainy-filter); /* ใช้เฟือน grainy-filter ที่ได้สร้างไว้ */
+}
+body {
+  margin-bottom: 0;
+  background-color: #25274a;
+}
+
+/* หรือหากคุณต้องการลบพื้นที่โล่งด้านล่างเฉพาะส่วนหนึ่ง เช่น คอมโพเนน "Contact" */
+.contact-container {
+  margin-bottom: 0;
+}

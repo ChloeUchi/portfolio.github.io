@@ -1,0 +1,6 @@
+<ifmodule mod_rewrite.c>
+    RewriteEngine On RewriteBase /portfolio-profile RewriteRule ^index\.html$
+    -[L] RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l RewriteRule .
+    /portfolio-profile/index.html [L]
+</ifmodule>

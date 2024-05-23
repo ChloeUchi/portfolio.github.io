@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color:#0c0f35 ;
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  /* pointer-events: none; */
+}
+
+.layer-1 {
+  background-image: url("../assets/bgParallax.jpg");
+  z-index: 1;
+  position: fixed;
+}
+
+/* .layer-2 {
+  background-image: url("../assets/kuromi.jpeg");
+  z-index: 2;
+  width: 30%;
+} */
+
+/* .layer-3 {
+  background-image: url("../assets/kurominchan.jpeg");
+  z-index: 3;
+  width: 20%;
+} */
+
+.content {
+  position: relative;
+  z-index: 7;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.parallax-item {
+  position: absolute;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+.item-1 {
+  @apply lg:top-[75%] lg:left-[33%] lg:w-[33%] h-auto md:w-[66%] w-[75%] md:top-[62%] md:left-[15%] top-[70%] left-[10%]
+}
+
+
+.border-gradient {
+  position: relative;
+  padding: 2em;
+  z-index: 0;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(to right, #ba61a9, #c48be7, #a17ce9);
+  padding: 10px;
+  padding-top: 25px;
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
